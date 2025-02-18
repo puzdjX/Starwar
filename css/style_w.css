@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bg{
+    width: 100vw;
+    height: 100vh;
+    animation: gradientBG 5s ease infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    filter: blur(25px);
+    position: absolute;
+    z-index: -1;
+}
+
+.wrap{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrap h1{
+    font-size: 100px;
+    color: transparent;
+    background: -webkit-linear-gradient(30deg, #32c5ff 25%, #b620e0 50%, #f7b500 75%, #20e050 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: auto;
+    font-weight: bold;
+    animation: gradientText 100s infinite linear;
+}
+
+.wrap p{
+    font-size: 24px;
+    color: #29e3fa;
+}
+
+@keyframes gradientText {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 28000px;
+    }
+}
+
+@keyframes move {
+    0%{
+        transform: scale(2);
+    }
+
+    50%{
+        transform: translateY(-5px);
+    }
+
+    100%{
+        transform: translateY(5px);
+    }
+}

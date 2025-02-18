@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(122, 116, 116);
+}
+
+.wrap {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.ui{
+    display: flex;
+    margin: 40px;
+}
+
+.ui div{
+    margin-right: 200px;
+}
+
+.game_board {
+    display: flex;
+}
+
+.hp {
+    width: 80px;
+    height: 290px;
+    background-color: #3c3c3c;
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+.hp li {
+    width: 100%;
+    height: 50px;
+    background-color: #1ac5e4;
+    margin-bottom: 10px;
+}
+
+.hp li:last-child {
+    margin-bottom: 0px;
+}
+
+@keyframes hurt1 {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        transform: translateX(100px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(100px);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes hurt2 {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(100px);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes trans3 {
+    0% {
+        background-color: #fff;
+    }
+
+    50% {
+        height: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes heal {
+    0% {
+        /* opacity: 0; */
+        background-color: #fff;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hurt3 {
+    0% {
+        background-color: #fff;
+        height: 0;
+    }
+
+    50% {
+        height: 50px;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        height: 50px;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    10%,90% {
+        transform: translateX(-2px);
+    }
+
+    20%,80% {
+        transform: translateX(4px);
+    }
+
+    30%,50%,70% {
+        transform: translateX(-4px);
+    }
+
+    40%,60% {
+        transform: translateX(5px);
+    }
+}
+
+.canvas {
+    /* margin: 150px auto; */
+    position: relative;
+    overflow: hidden;
+}
